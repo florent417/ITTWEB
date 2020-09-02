@@ -1,0 +1,19 @@
+{
+  "name": "request-ex",
+  "version": "1.0.0",
+  "description": "ex 1c L1. Set up func for request handling",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && nodemon dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "FA",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-status-codes": "^2.1.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.8"
+  }
+}
