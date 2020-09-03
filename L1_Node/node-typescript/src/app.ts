@@ -1,6 +1,5 @@
 import http from "http";
 import httpStatus from "http-status-codes";
-import { response } from "express";
 
 const port = 3000;
 const app = http.createServer( (req, res) => {
