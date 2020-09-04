@@ -15,22 +15,22 @@ const sendErrorRes = (res) => {
 };
 const server = http_1.default.createServer((req, res) => {
     let url = req.url || "";
-    if (url.includes(".html") !== false) {
+    if (url.indexOf(".html") !== -1) {
         res.writeHead(http_status_codes_1.default.OK, { "Content-Type": "text/html" });
         //console.log(url);
         customReadFile(publicPath + '/views' + url, res);
     }
     else if (url.indexOf(".css") !== -1) {
         res.writeHead(http_status_codes_1.default.OK, { "Content-Type": "text/css" });
-        customReadFile(publicPath + "/css" + url, res);
+        customReadFile(publicPath + "/css${url}", res);
     }
     else if (url.indexOf(".js") !== -1) {
         res.writeHead(http_status_codes_1.default.OK, { "Content-Type": "text/javascript" });
-        customReadFile(publicPath + "/js" + url, res);
+        customReadFile(publicPath + "/js${url}", res);
     }
     else if (url.indexOf(".png") !== -1) {
         res.writeHead(http_status_codes_1.default.OK, { "Content-Type": "image/png" });
-        customReadFile(publicPath + "/images" + url, res);
+        customReadFile(publicPath + "/images${url}", res);
     }
     else {
         sendErrorRes(res);
