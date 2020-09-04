@@ -64,4 +64,5 @@ console.log("Well done, you made a server!");
 //Can you think/program a better (more flexible) solution?
 // - Yes, if it possible (like in asp.net) to make fucntions that can act accordingly to routes, instead of going through a whole
 // sequence. Less error prone, more seperation etc. 
+// 4. For now i don't know how to improve the code in listing 7.8, but maybe something for saving the different routes in a folder? 
 //# sourceMappingURL=app.js.map
