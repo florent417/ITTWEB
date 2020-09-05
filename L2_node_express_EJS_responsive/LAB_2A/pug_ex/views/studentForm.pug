@@ -1,0 +1,17 @@
+include index
+
+block content
+    form(action="/students/add_student", method="POST")
+        div
+            label(for="name") Name:
+        div
+            input(type="text", name="name", value="")
+        div 
+            label(for="grade") Grade:
+        div
+            input(type="text", name="grade", value="")
+        div
+            input(type="submit", value="SUbmit")
+
+
+
