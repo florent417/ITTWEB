@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1 A list of all students
+    div
+        ol
+            each student in students
+                li= "Name: " + student.name + " Grade: " + student.grade
+
