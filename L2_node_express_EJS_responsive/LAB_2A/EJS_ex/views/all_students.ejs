@@ -1,0 +1,15 @@
+<h1>All students on Black board</h1>
+<ol>
+    <% students.forEach(student => {
+        %>
+        <li>
+            <strong>
+                <%= student.name %>
+            </strong>
+            <span>
+                <%= student.grade %>
+            </span>
+        </li>
+        <%
+    }); %>
+</ol>

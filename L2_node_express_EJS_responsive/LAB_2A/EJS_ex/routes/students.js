@@ -6,13 +6,15 @@ let Student = {
   grade: "Invertebrates"
 };
 
+const students = [];
+
 /* GET students listing. */
 router.get('/', function(req, res, next) {
-  res.render('studentForm', { title: 'Black board' });
+  res.render('index', { title: 'Black board' });
 });
 
 // POST student data
-router.post("/add_student", function(req, re, next){
+router.post('/add_student', function(req, re, next){
   students.push(createStudentObj(req));
   console.log(students.length);
 });
