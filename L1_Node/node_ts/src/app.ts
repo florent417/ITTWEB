@@ -17,19 +17,19 @@ const server = http.createServer( (req, res) => {
     if(url.includes(".html") !== false){
         res.writeHead(httpStatus.OK, { "Content-Type" : "text/html"});
         //console.log(url);
-        customReadFile(publicPath + '/views' + url, res);
+        customReadFile(publicPath + `/views${url}`, res);
     }
     else if(url.indexOf(".css") !== -1){
         res.writeHead(httpStatus.OK, { "Content-Type" : "text/css"});
-        customReadFile(publicPath + "/css" + url, res);
+        customReadFile(publicPath + `/css${url}`, res);
     }
     else if(url.indexOf(".js") !== -1){
         res.writeHead(httpStatus.OK, { "Content-Type" : "text/javascript"});
-        customReadFile(publicPath + "/js" + url, res);
+        customReadFile(publicPath + `/js${url}`, res);
     }
     else if(url.indexOf(".png") !== -1){
         res.writeHead(httpStatus.OK, { "Content-Type" : "image/png"});
-        customReadFile(publicPath + "/images" + url, res);
+        customReadFile(publicPath + `/images${url}`, res);
     }
     else{
         sendErrorRes(res);
